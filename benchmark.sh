@@ -8,7 +8,7 @@ CASES=(no_hyphenation default_hyphenation custom_hyphenation)
 run() {
     local case="$1"
 
-    local out_dir="../energy-results/${case}"
+    local out_dir="../GSLT-tests/energy-results/${case}"
 
     mkdir -p "$out_dir/idle" "$out_dir/run"
 
