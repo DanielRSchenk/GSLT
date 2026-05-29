@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd tex
-
 USER_RUNS=3
 
 CASES=(no_hyphenation default_hyphenation custom_hyphenation)
