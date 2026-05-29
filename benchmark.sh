@@ -29,4 +29,4 @@ run() {
 for case in "${CASES[@]}"; do
     echo "Running $case"
     run "$case"
-donebe
+done
