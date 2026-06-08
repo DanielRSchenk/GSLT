@@ -3,7 +3,7 @@ set -euo pipefail
 
 USER_RUNS=3
 
-CASES=(no_hyphenation default_hyphenation custom_hyphenation)
+CASES=(0 1 2)
 
 run() {
     local case="$1"
@@ -21,7 +21,8 @@ run() {
         -- bash -c "
             for i in \$(seq 1 $USER_RUNS); do
                 rm -f *.aux *.log *.pdf
-                lualatex -interaction=nonstopmode ${case}.tex > /dev/null
+                sed -i 's/algorithm = [0-9]\+/algorithm = ${case}/' config.lua
+                lualatex -interaction=nonstopmode darwin.tex
             done
         "
 }
