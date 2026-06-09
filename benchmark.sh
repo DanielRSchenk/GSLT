@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-USER_RUNS=3
+USER_RUNS=5
 
 CASES=(0 1 2)
 
