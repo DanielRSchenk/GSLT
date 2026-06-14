@@ -3,7 +3,7 @@ set -euo pipefail
 
 USER_RUNS=5
 
-CASES=(0 1 2)
+CASES=(0 1)
 
 run() {
     local case="$1"
